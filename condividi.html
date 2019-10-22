@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Condividi il sondaggio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700' type='text/css'>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script> <!-- Fonte: https://www.javascripting.com/view/device-js -->
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+        <style type="text/css" media="screen">
+            /* MOBILE, PORTRAIT_TABLET */
+            @media only screen and (max-width: 767px) {
+                .elements {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    text-align: center;
+                }
+
+                .buttons {
+                    width: 70%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .message {
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 300;
+                    font-size: 15px;
+                    margin-bottom: 25px;
+                }
+
+                img {
+                    margin: 5px;
+                }
+
+                img:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            /* LANDSCAPE_TABLET, DESKTOP */
+            @media only screen and (min-width: 768px) {
+                .elements {
+                    width: 100%;
+                    position: absolute;
+                    top: 40%;
+                    text-align: center;
+                }
+
+                .message {
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 300;
+                    font-size: 18px;
+                    margin-bottom: 25px;
+                }
+
+                img {
+                    margin: 5px;
+                }
+
+                img:hover {
+                    opacity: 0.8;
+                }
+            }
+        </style>
+
+        <script type="text/javascript">
+            website = "https://www.google.it";
+            message_nowebsite = "Ti%20inoltro%20il%20sondaggio!";
+            message_wthwebsite = "Ti%20inoltro%20il%20sondaggio!%20" + website;
+            logo_dimensions = "width:80px;height:80px;";
+
+            messages_logo = "<img src=\"https://cdn.iconscout.com/icon/free/png-256/imessage-1100770.png\" alt=\"Logo Messaggi\" style=\"" + logo_dimensions + "\">";
+            messages_sendByApp = "<a href=\"sms:?&body=" + message_wthwebsite + "\">" + messages_logo + "</a> ";
+
+            whatsapp_logo = "<img src=\"https://image.flaticon.com/icons/svg/733/733585.svg\" alt=\"Logo Whatsapp\" style=\"" + logo_dimensions + "\">";
+            whatsapp_sendByApp = "<a href=\"whatsapp://send?text=" + message_wthwebsite + "\">" + whatsapp_logo + "</a> ";
+            whatsapp_sendByWeb = "<a href=\"https://web.whatsapp.com/send?text=" + message_wthwebsite + "\" target=\"_blank\">" + whatsapp_logo + "</a> ";
+
+            telegram_logo = "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png\" alt=\"Logo Telegram\" style=\"" + logo_dimensions + "\">";
+            telegram_sendByApp = "<a href=\"tg://msg?text=" + message_wthwebsite + "\">" + telegram_logo + "</a> ";
+            telegram_sendByWeb = "<a href=\"https://telegram.me/share/url?url=" + website + "&text=" + message_nowebsite + "\" target=\"_blank\">" + telegram_logo + "</a> ";
+
+            facebook_logo = "<img src=\"https://image.flaticon.com/icons/svg/145/145802.svg\" alt=\"Logo Facebook\" style=\"" + logo_dimensions + "\">";
+            facebook_sendByWeb = "<a href=\"https://www.facebook.com/sharer/sharer.php?u=" + website + "&quote=" + message_nowebsite + "\" target=\"_blank\">" + facebook_logo + "</a> ";
+
+            messenger_logo = "<img src=\"https://image.flaticon.com/icons/svg/889/889101.svg\" alt=\"Logo Messenger\" style=\"" + logo_dimensions + "\">";
+            messenger_sendByApp = "<a href=\"fb-messenger://share?link=" + website + "\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
+            messenger_sendByWeb = "<a href=\"http://www.facebook.com/dialog/send?app_id=1272352092941144&link=" + website + "&redirect_uri=" + website + "\" target=\"_blank\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
+
+            twitter_logo = "<img src=\"https://image.flaticon.com/icons/svg/145/145812.svg\" alt=\"Logo Twitter\" style=\"" + logo_dimensions + "\">";
+            twitter_sendByApp = "<a href=\"twitter://post?message=" + message_wthwebsite + "\">" + twitter_logo + "</a> ";
+            twitter_sendByWeb = "<a href=\"https://twitter.com/share?url=" + website + "&text=" + message_nowebsite + "\" target=\"_blank\">" + twitter_logo + "</a> ";
+        </script>
+
+    </head>
+    <body>
+
+        <div class="elements">
+            <div class="message">
+                Condividi questo sondaggio con chi vuoi 😊
+            </div>
+
+            <div class="buttons">
+                <img src="https://i.ibb.co/0tHzxtD/copy-logo-black.png" alt="Logo Copia" style="width:80px;height:80px;" id="copy" class="copy" data-clipboard-text="https://www.google.it" onmouseenter="copy()" onclick="copied()" data-toggle="tooltip" data-placement="bottom">
+
+                <script type="text/javascript">
+                    if (device.mobile()) {
+        //------------------------------------------------------------------------------
+                        // MOBILE
+                        document.write(messages_sendByApp);
+                        document.write(whatsapp_sendByApp);
+                        document.write(telegram_sendByApp);
+                        document.write(facebook_sendByWeb);
+                        document.write(messenger_sendByApp);
+                        document.write(twitter_sendByApp);
+
+        //------------------------------------------------------------------------------
+                    } else {
+                        if (device.tablet()) {
+        //------------------------------------------------------------------------------
+                            // TABLET
+                            document.write();
+
+        //------------------------------------------------------------------------------
+                        } else {
+        //------------------------------------------------------------------------------
+                            // DESKTOP
+                            document.write(whatsapp_sendByWeb);
+                            document.write(telegram_sendByWeb);
+                            document.write(facebook_sendByWeb);
+                            document.write(messenger_sendByWeb);
+                            document.write(twitter_sendByWeb);
+
+        //------------------------------------------------------------------------------
+                        }
+                    }
+                </script>
+
+                <script type="text/javascript">
+                    var clipboard = new ClipboardJS('.copy');
+                    $(document).ready(function(){
+                      $('[data-toggle="tooltip"]').tooltip();
+                    });
+
+                    function copy() {
+                        element = document.getElementById("copy");
+                        $('.tooltip-inner').css({
+                            'background-color': 'black',
+                            'color': 'white'
+                        });
+                        $(element).attr('data-original-title', 'Copia Link').tooltip('show')
+                    }
+
+                    function copied() {
+                        element = document.getElementById("copy");
+                        $('.tooltip-inner').css({
+                            'background-color': 'black',
+                            'color': 'white'
+                        });
+                        $(element).attr('data-original-title', 'Copiato').tooltip('show')
+                    }
+                </script>
+            </div>
+        </div>
+
+    </body>
+</html>
