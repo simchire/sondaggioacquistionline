@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
     <head>
-        <meta charset="utf-8">
         <title>Condividi il sondaggio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700' type='text/css'>
 
@@ -38,6 +39,10 @@
                     margin-bottom: 25px;
                 }
 
+                .thanks {
+                    font-size: 25px;
+                }
+
                 img {
                     margin: 5px;
                 }
@@ -52,7 +57,7 @@
                 .elements {
                     width: 100%;
                     position: absolute;
-                    top: 40%;
+                    top: 30%;
                     text-align: center;
                 }
 
@@ -61,6 +66,10 @@
                     font-weight: 300;
                     font-size: 18px;
                     margin-bottom: 25px;
+                }
+
+                .thanks {
+                    font-size: 30px;
                 }
 
                 img {
@@ -74,9 +83,9 @@
         </style>
 
         <script type="text/javascript">
-            website = "https://www.google.it";
-            message_nowebsite = "Ti%20inoltro%20il%20sondaggio!";
-            message_wthwebsite = "Ti%20inoltro%20il%20sondaggio!%20" + website;
+            website = "www.sondaggioacquistionline.com";
+            message_nowebsite = "Da%20scrivere...";
+            message_wthwebsite = "Da%20scrivere...%20" + website;
             logo_dimensions = "width:80px;height:80px;";
 
             messages_logo = "<img src=\"https://cdn.iconscout.com/icon/free/png-256/imessage-1100770.png\" alt=\"Logo Messaggi\" style=\"" + logo_dimensions + "\">";
@@ -107,11 +116,12 @@
 
         <div class="elements">
             <div class="message">
+                <div class="thanks"> Grazie, </div><br>
                 Condividi questo sondaggio con chi vuoi 😊
             </div>
 
             <div class="buttons">
-                <img src="https://i.ibb.co/0tHzxtD/copy-logo-black.png" alt="Logo Copia" style="width:80px;height:80px;" id="copy" class="copy" data-clipboard-text="https://www.google.it" onmouseenter="copy()" onclick="copied()" data-toggle="tooltip" data-placement="bottom">
+                <img src="https://i.ibb.co/0tHzxtD/copy-logo-black.png" alt="Logo Copia" style="width:80px;height:80px;" id="copy" class="copy" data-clipboard-text="www.sondaggioacquistionline.com" onmouseenter="copy()" onclick="copied()" data-toggle="tooltip" data-placement="bottom">
 
                 <script type="text/javascript">
                     if (device.mobile()) {
