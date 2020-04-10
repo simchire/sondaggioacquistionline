@@ -93,6 +93,7 @@
 
         <script type="text/javascript">
             website = "www.sondaggioacquistionline.com";
+            title = "Da%20scrivere...";
             message_nowebsite = "Da%20scrivere...";
             message_wthwebsite = "Da%20scrivere...%20" + website;
             logo_dimensions = "width:80px;height:80px;";
@@ -107,6 +108,9 @@
             telegram_logo = "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png\" alt=\"Logo Telegram\" style=\"" + logo_dimensions + "\">";
             telegram_sendByApp = "<a href=\"tg://msg?text=" + message_wthwebsite + "\">" + telegram_logo + "</a> ";
             telegram_sendByWeb = "<a href=\"https://telegram.me/share/url?url=" + website + "&text=" + message_nowebsite + "\" target=\"_blank\">" + telegram_logo + "</a> ";
+
+            email_logo = "<img src=\"https://boozter.net/images/icon_gmail.png\" alt=\"Logo Email\" style=\"" + logo_dimensions + "\">";
+            email_sendByApp = "<a href=\"mailto:?subject=" + title + "&body=" + message_wthwebsite + "\">" + email_logo + "</a> ";
 
             facebook_logo = "<img src=\"https://image.flaticon.com/icons/svg/145/145802.svg\" alt=\"Logo Facebook\" style=\"" + logo_dimensions + "\">";
             facebook_sendByWeb = "<a href=\"https://www.facebook.com/sharer/sharer.php?u=" + website + "&quote=" + message_nowebsite + "\" target=\"_blank\">" + facebook_logo + "</a> ";
@@ -156,6 +160,7 @@
                             // DESKTOP
                             document.write(whatsapp_sendByWeb);
                             document.write(telegram_sendByWeb);
+                            document.write(email_sendByApp);
                             document.write(facebook_sendByWeb);
                             document.write(messenger_sendByWeb);
                             document.write(twitter_sendByWeb);
