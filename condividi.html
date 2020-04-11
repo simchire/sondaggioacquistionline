@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
     <head>
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+            })
+            (window,document,'script','dataLayer','GTM-MXG84SR');
+        </script>
+        <!-- End Google Tag Manager -->
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150716052-1"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -92,40 +107,53 @@
         </style>
 
         <script type="text/javascript">
+            title = "SONDAGGIO%20ACQUISTI%20ONLINE";
+            hashtag = "#sondaggioacquistionlineICS";
             website = "www.sondaggioacquistionline.com";
-            title = "Da%20scrivere...";
-            message_nowebsite = "Da%20scrivere...";
-            message_wthwebsite = "Da%20scrivere...%20" + website;
+            directMessage_nowebsite = "Ciao,%20ti%20inoltro%20il%20sondaggio%20sugli%20acquisti%20online%20che%20ho%20appena%20compilato.%20Se%20vuoi,%20collabora%20anche%20tu%20alla%20realizzazione%20di%20questo%20progetto;%20è%20veloce%20e%20gratuito.%20" + hashtag;
+            directMessage_wthwebsite = directMessage_nowebsite + "%20" + website;
+            socialMessage_nowebsite = "Vi%20condivido%20il%20sondaggio%20sugli%20acquisti%20online%20che%20ho%20appena%20compilato.%20Se%20volete,%20collaborate%20anche%20voi%20alla%20realizzazione%20di%20questo%20progetto;%20è%20veloce%20e%20gratuito.%20" + hashtag;
+            socialMessage_wthwebsite = socialMessage_nowebsite + "%20" + website;
+
             logo_dimensions = "width:80px;height:80px;";
 
-            messages_logo = "<img src=\"https://cdn.iconscout.com/icon/free/png-256/imessage-1100770.png\" alt=\"Logo Messaggi\" style=\"" + logo_dimensions + "\">";
-            messages_sendByApp = "<a href=\"sms:?&body=" + message_wthwebsite + "\">" + messages_logo + "</a> ";
+            iOSmessages_logo = "<img src=\"https://cdn.iconscout.com/icon/free/png-256/imessage-1100770.png\" alt=\"Logo Messaggi\" style=\"" + logo_dimensions + "\">";
+            iOSmessages_sendByApp = "<a href=\"sms:?&body=" + directMessage_wthwebsite + "\">" + iOSmessages_logo + "</a> ";
+
+            androidmessages_logo = "<img src=\"https://upload.wikimedia.org/wikipedia/en/0/05/Google_Messages_logo.svg\" alt=\"Logo Messaggi\" style=\"" + logo_dimensions + "\">";
+            androidmessages_sendByApp = "<a href=\"sms:?&body=" + directMessage_wthwebsite + "\">" + androidmessages_logo + "</a> ";
 
             whatsapp_logo = "<img src=\"https://image.flaticon.com/icons/svg/733/733585.svg\" alt=\"Logo Whatsapp\" style=\"" + logo_dimensions + "\">";
-            whatsapp_sendByApp = "<a href=\"whatsapp://send?text=" + message_wthwebsite + "\">" + whatsapp_logo + "</a> ";
-            whatsapp_sendByWeb = "<a href=\"https://web.whatsapp.com/send?text=" + message_wthwebsite + "\" target=\"_blank\">" + whatsapp_logo + "</a> ";
+            whatsapp_sendByApp = "<a href=\"whatsapp://send?text=" + directMessage_wthwebsite + "\">" + whatsapp_logo + "</a> ";
+            whatsapp_sendByWeb = "<a href=\"https://web.whatsapp.com/send?text=" + directMessage_wthwebsite + "\" target=\"_blank\">" + whatsapp_logo + "</a> ";
 
             telegram_logo = "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png\" alt=\"Logo Telegram\" style=\"" + logo_dimensions + "\">";
-            telegram_sendByApp = "<a href=\"tg://msg?text=" + message_wthwebsite + "\">" + telegram_logo + "</a> ";
-            telegram_sendByWeb = "<a href=\"https://telegram.me/share/url?url=" + website + "&text=" + message_nowebsite + "\" target=\"_blank\">" + telegram_logo + "</a> ";
+            telegram_sendByApp = "<a href=\"tg://msg?text=" + directMessage_wthwebsite + "\">" + telegram_logo + "</a> ";
+            telegram_sendByWeb = "<a href=\"https://telegram.me/share/url?url=" + website + "&text=" + directMessage_nowebsite + "\" target=\"_blank\">" + telegram_logo + "</a> ";
 
             email_logo = "<img src=\"https://boozter.net/images/icon_gmail.png\" alt=\"Logo Email\" style=\"" + logo_dimensions + "\">";
-            email_sendByApp = "<a href=\"mailto:?subject=" + title + "&body=" + message_wthwebsite + "\">" + email_logo + "</a> ";
+            email_sendByApp = "<a href=\"mailto:?subject=" + title + "&body=" + directMessage_wthwebsite + "\">" + email_logo + "</a> ";
 
             facebook_logo = "<img src=\"https://image.flaticon.com/icons/svg/145/145802.svg\" alt=\"Logo Facebook\" style=\"" + logo_dimensions + "\">";
-            facebook_sendByWeb = "<a href=\"https://www.facebook.com/sharer/sharer.php?u=" + website + "&quote=" + message_nowebsite + "\" target=\"_blank\">" + facebook_logo + "</a> ";
+            facebook_sendByWeb = "<a href=\"https://www.facebook.com/sharer/sharer.php?u=" + website + "&quote=" + socialMessage_nowebsite + "\" target=\"_blank\">" + facebook_logo + "</a> ";
 
             messenger_logo = "<img src=\"https://image.flaticon.com/icons/svg/889/889101.svg\" alt=\"Logo Messenger\" style=\"" + logo_dimensions + "\">";
             messenger_sendByApp = "<a href=\"fb-messenger://share?link=" + website + "\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
             messenger_sendByWeb = "<a href=\"http://www.facebook.com/dialog/send?app_id=1272352092941144&link=" + website + "&redirect_uri=" + website + "\" target=\"_blank\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
 
             twitter_logo = "<img src=\"https://image.flaticon.com/icons/svg/145/145812.svg\" alt=\"Logo Twitter\" style=\"" + logo_dimensions + "\">";
-            twitter_sendByApp = "<a href=\"twitter://post?message=" + message_wthwebsite + "\">" + twitter_logo + "</a> ";
-            twitter_sendByWeb = "<a href=\"https://twitter.com/share?url=" + website + "&text=" + message_nowebsite + "\" target=\"_blank\">" + twitter_logo + "</a> ";
+            twitter_sendByApp = "<a href=\"twitter://post?message=" + socialMessage_wthwebsite + "\">" + twitter_logo + "</a> ";
+            twitter_sendByWeb = "<a href=\"https://twitter.com/share?url=" + website + "&text=" + socialMessage_nowebsite + "\" target=\"_blank\">" + twitter_logo + "</a> ";
         </script>
 
     </head>
     <body>
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXG84SR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
         <div class="elements">
             <div class="message">
@@ -140,9 +168,14 @@
                     if (device.mobile()) {
         //------------------------------------------------------------------------------
                         // MOBILE
-                        document.write(messages_sendByApp);
+                        if(device.ios()) {
+                            document.write(iOSmessages_sendByApp);
+                        } else {
+                            document.write(androidmessages_sendByApp);
+                        }
                         document.write(whatsapp_sendByApp);
                         document.write(telegram_sendByApp);
+                        document.write(email_sendByApp);
                         document.write(facebook_sendByWeb);
                         document.write(messenger_sendByApp);
                         document.write(twitter_sendByApp);
@@ -152,7 +185,12 @@
                         if (device.tablet()) {
         //------------------------------------------------------------------------------
                             // TABLET
-                            document.write();
+                            document.write(whatsapp_sendByWeb);
+                            document.write(telegram_sendByApp);
+                            document.write(email_sendByApp);
+                            document.write(facebook_sendByWeb);
+                            document.write(messenger_sendByApp);
+                            document.write(twitter_sendByApp);
 
         //------------------------------------------------------------------------------
                         } else {
