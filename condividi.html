@@ -131,8 +131,8 @@
             telegram_sendByApp = "<a class=\"shareButton\" id=\"Telegram_App\" href=\"tg://msg?text=" + directMessage_wthwebsite + "\">" + telegram_logo + "</a> ";
             telegram_sendByWeb = "<a class=\"shareButton\" id=\"Telegram_Web\" href=\"https://telegram.me/share/url?url=" + website + "&text=" + directMessage_nowebsite + "\" target=\"_blank\">" + telegram_logo + "</a> ";
 
-            email_logo = "<img src=\"https://boozter.net/images/icon_gmail.png\" alt=\"Logo Email\" style=\"" + logo_dimensions + "\">";
-            email_sendByApp = "<a class=\"shareButton\" id=\"Email_App\" href=\"mailto:?subject=" + title + "&body=" + directMessage_wthwebsite + "\">" + email_logo + "</a> ";
+            email_logo = "<img class=\"shareButton\" id=\"Email_App\" src=\"https://boozter.net/images/icon_gmail.png\" alt=\"Logo Email\" style=\"" + logo_dimensions + "\">";
+            email_sendByApp = "<a href=\"mailto:?subject=" + title + "&body=" + directMessage_wthwebsite + "\">" + email_logo + "</a> ";
 
             facebook_logo = "<img src=\"https://image.flaticon.com/icons/svg/145/145802.svg\" alt=\"Logo Facebook\" style=\"" + logo_dimensions + "\">";
             facebook_sendByWeb = "<a class=\"shareButton\" id=\"Facebook_Web\" href=\"https://www.facebook.com/sharer/sharer.php?u=" + website + "&quote=" + socialMessage_nowebsite + "\" target=\"_blank\">" + facebook_logo + "</a> ";
