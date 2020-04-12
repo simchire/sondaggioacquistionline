@@ -118,32 +118,32 @@
             logo_dimensions = "width:80px;height:80px;";
 
             iOSmessages_logo = "<img src=\"https://cdn.iconscout.com/icon/free/png-256/imessage-1100770.png\" alt=\"Logo Messaggi\" style=\"" + logo_dimensions + "\">";
-            iOSmessages_sendByApp = "<a href=\"sms:?&body=" + directMessage_wthwebsite + "\">" + iOSmessages_logo + "</a> ";
+            iOSmessages_sendByApp = "<a class=\"shareButton\" id=\"iOS_Messages_App\" href=\"sms:?&body=" + directMessage_wthwebsite + "\">" + iOSmessages_logo + "</a> ";
 
             androidmessages_logo = "<img src=\"https://upload.wikimedia.org/wikipedia/en/0/05/Google_Messages_logo.svg\" alt=\"Logo Messaggi\" style=\"" + logo_dimensions + "\">";
-            androidmessages_sendByApp = "<a href=\"sms:?&body=" + directMessage_wthwebsite + "\">" + androidmessages_logo + "</a> ";
+            androidmessages_sendByApp = "<a class=\"shareButton\" id=\"Android_Messages_App\" href=\"sms:?&body=" + directMessage_wthwebsite + "\">" + androidmessages_logo + "</a> ";
 
             whatsapp_logo = "<img src=\"https://image.flaticon.com/icons/svg/733/733585.svg\" alt=\"Logo Whatsapp\" style=\"" + logo_dimensions + "\">";
-            whatsapp_sendByApp = "<a href=\"whatsapp://send?text=" + directMessage_wthwebsite + "\">" + whatsapp_logo + "</a> ";
-            whatsapp_sendByWeb = "<a href=\"https://web.whatsapp.com/send?text=" + directMessage_wthwebsite + "\" target=\"_blank\">" + whatsapp_logo + "</a> ";
+            whatsapp_sendByApp = "<a class=\"shareButton\" id=\"Whatsapp_App\" href=\"whatsapp://send?text=" + directMessage_wthwebsite + "\">" + whatsapp_logo + "</a> ";
+            whatsapp_sendByWeb = "<a class=\"shareButton\" id=\"Whatsapp_Web\" href=\"https://web.whatsapp.com/send?text=" + directMessage_wthwebsite + "\" target=\"_blank\">" + whatsapp_logo + "</a> ";
 
             telegram_logo = "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png\" alt=\"Logo Telegram\" style=\"" + logo_dimensions + "\">";
-            telegram_sendByApp = "<a href=\"tg://msg?text=" + directMessage_wthwebsite + "\">" + telegram_logo + "</a> ";
-            telegram_sendByWeb = "<a href=\"https://telegram.me/share/url?url=" + website + "&text=" + directMessage_nowebsite + "\" target=\"_blank\">" + telegram_logo + "</a> ";
+            telegram_sendByApp = "<a class=\"shareButton\" id=\"Telegram_App\" href=\"tg://msg?text=" + directMessage_wthwebsite + "\">" + telegram_logo + "</a> ";
+            telegram_sendByWeb = "<a class=\"shareButton\" id=\"Telegram_Web\" href=\"https://telegram.me/share/url?url=" + website + "&text=" + directMessage_nowebsite + "\" target=\"_blank\">" + telegram_logo + "</a> ";
 
             email_logo = "<img src=\"https://boozter.net/images/icon_gmail.png\" alt=\"Logo Email\" style=\"" + logo_dimensions + "\">";
-            email_sendByApp = "<a href=\"mailto:?subject=" + title + "&body=" + directMessage_wthwebsite + "\">" + email_logo + "</a> ";
+            email_sendByApp = "<a class=\"shareButton\" id=\"Email_App\" href=\"mailto:?subject=" + title + "&body=" + directMessage_wthwebsite + "\">" + email_logo + "</a> ";
 
             facebook_logo = "<img src=\"https://image.flaticon.com/icons/svg/145/145802.svg\" alt=\"Logo Facebook\" style=\"" + logo_dimensions + "\">";
-            facebook_sendByWeb = "<a href=\"https://www.facebook.com/sharer/sharer.php?u=" + website + "&quote=" + socialMessage_nowebsite + "\" target=\"_blank\">" + facebook_logo + "</a> ";
+            facebook_sendByWeb = "<a class=\"shareButton\" id=\"Facebook_Web\" href=\"https://www.facebook.com/sharer/sharer.php?u=" + website + "&quote=" + socialMessage_nowebsite + "\" target=\"_blank\">" + facebook_logo + "</a> ";
 
             messenger_logo = "<img src=\"https://image.flaticon.com/icons/svg/889/889101.svg\" alt=\"Logo Messenger\" style=\"" + logo_dimensions + "\">";
-            messenger_sendByApp = "<a href=\"fb-messenger://share?link=" + website + "\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
-            messenger_sendByWeb = "<a href=\"http://www.facebook.com/dialog/send?app_id=1272352092941144&link=" + website + "&redirect_uri=" + website + "\" target=\"_blank\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
+            messenger_sendByApp = "<a class=\"shareButton\" id=\"Messenger_App\" href=\"fb-messenger://share?link=" + website + "\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
+            messenger_sendByWeb = "<a class=\"shareButton\" id=\"Messenger_Web\" href=\"http://www.facebook.com/dialog/send?app_id=1272352092941144&link=" + website + "&redirect_uri=" + website + "\" target=\"_blank\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
 
             twitter_logo = "<img src=\"https://image.flaticon.com/icons/svg/145/145812.svg\" alt=\"Logo Twitter\" style=\"" + logo_dimensions + "\">";
-            twitter_sendByApp = "<a href=\"twitter://post?message=" + socialMessage_wthwebsite + "\">" + twitter_logo + "</a> ";
-            twitter_sendByWeb = "<a href=\"https://twitter.com/share?url=" + website + "&text=" + socialMessage_nowebsite + "\" target=\"_blank\">" + twitter_logo + "</a> ";
+            twitter_sendByApp = "<a class=\"shareButton\" id=\"Twitter_App\" href=\"twitter://post?message=" + socialMessage_wthwebsite + "\">" + twitter_logo + "</a> ";
+            twitter_sendByWeb = "<a class=\"shareButton\" id=\"Twitter_Web\" href=\"https://twitter.com/share?url=" + website + "&text=" + socialMessage_nowebsite + "\" target=\"_blank\">" + twitter_logo + "</a> ";
         </script>
 
     </head>
