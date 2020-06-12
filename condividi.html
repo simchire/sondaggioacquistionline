@@ -115,7 +115,9 @@
             directMessage_wthwebsite = directMessage_nowebsite + "%20" + website;
             directMessage_wthwebsite_nohashtag = directMessage_nowebsite_nohashtag + "%20" + website;
             socialMessage_nowebsite = "Vi%20condivido%20il%20sondaggio%20sugli%20acquisti%20online%20che%20ho%20appena%20compilato.%20Se%20volete,%20collaborate%20anche%20voi%20alla%20realizzazione%20di%20questo%20progetto;%20è%20veloce%20e%20gratuito.%20" + hashtag;
+            socialMessage_nowebsite_nohashtag = "Vi%20condivido%20il%20sondaggio%20sugli%20acquisti%20online%20che%20ho%20appena%20compilato.%20Se%20volete,%20collaborate%20anche%20voi%20alla%20realizzazione%20di%20questo%20progetto;%20è%20veloce%20e%20gratuito.";
             socialMessage_wthwebsite = socialMessage_nowebsite + "%20" + website;
+            socialMessage_wthwebsite_nohashtag = socialMessage_nowebsite_nohashtag + "%20" + website;
 
             logo_dimensions = "width:80px;height:80px;";
 
@@ -144,7 +146,7 @@
             messenger_sendByWeb = "<a href=\"http://www.facebook.com/dialog/send?app_id=1272352092941144&link=" + website + "&redirect_uri=" + website + "\" target=\"_blank\">" + messenger_logo + "</a> "; //MESSAGGIO NON PREIMPOSTABILE
 
             twitter_logo = "<img class=\"shareButton\" id=\"Twitter\" src=\"https://image.flaticon.com/icons/svg/145/145812.svg\" alt=\"Logo Twitter\" style=\"" + logo_dimensions + "\">";
-            twitter_sendByApp = "<a href=\"twitter://post?message=" + socialMessage_wthwebsite + "\">" + twitter_logo + "</a> ";
+            twitter_sendByApp = "<a href=\"twitter://post?message=" + socialMessage_wthwebsite_nohashtag + "\">" + twitter_logo + "</a> ";
             twitter_sendByWeb = "<a href=\"https://twitter.com/share?url=" + website + "&text=" + socialMessage_nowebsite + "\" target=\"_blank\">" + twitter_logo + "</a> ";
         </script>
 
